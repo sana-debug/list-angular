@@ -1,0 +1,33 @@
+<div class="card list-course my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" *ngIf="!serviceCourse.isFinding">
+        <h5>toDO List</h5>
+        <div class="card-course" *ngFor="let list of todoList">
+          <h5>{{ list.title }}</h5>
+
+          <a href="" (click)="addCourseDone($event, list)">Cours Vu </a> |
+          <a href="" [routerLink]="['/course', list.id]">Plus d'infos </a>|
+          <a href="" (click)="remove($event, list)">Supprimer </a>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="serviceCourse.isFinding">
+        <h5>toDO List</h5>
+        <div class="card-course" *ngFor="let list of serviceCourse.result">
+          <h5>{{ list.title }}</h5>
+
+          <a href="" (click)="addCourseDone($event, list)">Cours Vu </a> |
+          <a href="" [routerLink]="['/course', list.id]">Plus d'infos </a>|
+          <a href="" (click)="remove($event, list)">Supprimer </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h5>Done List</h5>
+        <div class="card-course course-done" *ngFor="let list of doneList">
+          <h5>{{ list.title }}</h5>
+          <p>{{ list.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

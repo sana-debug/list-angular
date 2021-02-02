@@ -1,0 +1,17 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <add-course></add-course>
+      </div>
+      <div class="col-md-8 lists" *ngIf="!serviceCourse.userIsEditing">
+        <app-search-course></app-search-course>
+        <lists></lists>
+        {{message}}
+      </div>
+      <div class="col-md-8 edit-view" *ngIf="serviceCourse.userIsEditing">
+        <app-live-edit-viewer></app-live-edit-viewer>
+      </div>
+    </div>
+  </div>
+</main>

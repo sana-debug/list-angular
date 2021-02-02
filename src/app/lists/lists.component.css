@@ -1,0 +1,14 @@
+.card-course{
+    border: 1px solid rgb(209, 207, 207);
+   
+    border-radius: 4px;
+    margin-bottom: 10px;
+   
+}
+.list-course{
+    padding: 10px;
+}
+.course-done{
+    background-color: rgb(219, 215, 215);
+}
+

@@ -1,0 +1,36 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h3>Ajouter un cours</h3>
+    <form #f="ngForm" (submit)="onSubmitForm(f)">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Titre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="title"
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contenu</label>
+
+        <textarea
+          class="form-control"
+          name="content"
+          ngModel
+          [(ngModel)]="markdown"
+          (keyup)="onKeyupTextarea(markdown)"
+          (focus)="onFocusInput()"
+          (blur)="onBlurInput()"
+          name="content"
+        >
+        </textarea>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary mt-2">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>

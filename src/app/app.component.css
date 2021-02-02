@@ -1,0 +1,11 @@
+header{
+    background-color: gray;
+   
+}
+header a {
+    color : #fff
+}
+.logo{
+    width: 25%;
+    height: 20%;
+}
