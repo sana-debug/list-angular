@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { UserService } from './user.service';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { UserService } from './user.service';
     SearchCourseComponent,
     LoginComponent,
     HomeComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
